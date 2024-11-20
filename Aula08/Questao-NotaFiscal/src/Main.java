@@ -17,6 +17,5 @@ public class Main {
         notaFiscal.adicionaProduto3(produto3);
 
         System.out.println(notaFiscal);
-
     }
 }
