@@ -1,7 +1,7 @@
 package model;
 import enums.*;
 
-public class Medico extends Pessoa {
+public class Medico extends Pessoa implements Funcao{
     private final Profissional profissional = Profissional.Médico;
     private Especializacao especializacao;
 
@@ -32,5 +32,10 @@ public class Medico extends Pessoa {
     //transf. polimorfica
     public void responsabilidade(){
         System.out.println("Responsabilidade do médico: atender, evoluir, internar, fazer procedimentos, dar alta e reportar à família a situação do paciente.");
+    }
+
+    @Override
+    public void estabelecerFuncao() {
+        System.out.println("função do médico: diagnosticar");
     }
 }

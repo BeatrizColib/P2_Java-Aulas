@@ -1,6 +1,7 @@
-import model.*;
+
 import enums.*;
-//import javax.swing.plaf.synth.SynthOptionPaneUI;
+import model.*;
+
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -21,15 +22,19 @@ public class Main {
         System.out.println("------------------------CONSULTA ENFERMAGEM----------------------------");
         System.out.println(consultaEnfermagem);
         System.out.println("-----------------------------------------------------------------------");
+        System.out.println();
 
-        System.out.println("------------------------Responsabilidades______________________________");
+        System.out.println("------------------------Responsabilidades e Funções-------------------------");
         //transformação polimorfica
         Pessoa med = new Medico("João", 63, Especializacao.DERMATOLOGISTA);
         Pessoa enf = new Enfermeiro("Cássia", 62);
 
         TransformacaoPolimorfica trans = new TransformacaoPolimorfica();
-        medico.responsabilidade();
+        med.responsabilidade();
         trans.polimorfismo_interface((Funcao) med);
+
+        enf.responsabilidade();
+        trans.polimorfismo_interface((Funcao) enf);
 
 
     }
